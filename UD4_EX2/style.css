@@ -43,8 +43,8 @@ body{
 }
 
 .transformButton:hover{
-    transform: rotate(360deg);
-    transition: all 3s ease 0s;
+    transform: rotate(20deg);
+    transition: all 1s ease 0s;
 }
 
 .selectAvatar{
@@ -56,6 +56,10 @@ body{
     box-shadow: 7px 7px 7px black;
 }
 
+.input-type:hover{
+    animation: jiggle 0.3s ease-in;
+}
+
 input[type=radio] {
     display: none;
 }
@@ -64,11 +68,12 @@ input[type=radio] {
     opacity: 50%;
     max-width: 90px;
     max-height: 90px;
+    transition: all 0.5s;
 }
 
 .imgAvatar:hover{
     opacity: 100%;
     max-width: 120px;
     max-height: 120px;
+    transition: all 1s;
 }
-
