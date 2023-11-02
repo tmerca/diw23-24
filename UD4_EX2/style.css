@@ -1,0 +1,56 @@
+@font-face {
+    font-family: Oswald;
+    src: url(font/Oswald-VariableFont_wght.ttf);
+}
+
+body{
+    background-image: url("img/background.png") !important;
+    font-family: "Oswald" !important;
+}
+
+.formButton{
+    background-color: #d6ccc2 !important;
+    border: solid black 2px !important;
+}
+
+.containerForm{
+    background-color: transparent;
+    background: linear-gradient(to top, #e6b980 0%, #d6ccc2 100%);
+    backdrop-filter: blur(10px);
+    max-width: 400px !important;
+    border: solid black 3px;
+    border-radius: 5px;
+}
+
+.transitionButton:hover{
+    width: 200px;
+}
+
+.shadowButton{
+    box-shadow: 3px 5px 5px black;
+}
+
+.selectAvatar{
+    display: block;
+}
+
+.input-type{
+    border-radius: 7px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+.imgAvatar{
+    opacity: 50%;
+    max-width: 90px;
+    max-height: 90px;
+}
+
+.imgAvatar:hover{
+    opacity: 100%;
+    max-width: 120px;
+    max-height: 120px;
+}
+
