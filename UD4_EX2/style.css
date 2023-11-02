@@ -10,8 +10,10 @@ body{
 
 .formButton{
     background-color: #d6ccc2 !important;
+    width: 134.5px;
     border: solid black 2px !important;
 }
+
 
 .containerForm{
     background-color: transparent;
@@ -24,11 +26,18 @@ body{
 
 .transitionButton:hover{
     width: 200px;
+    transition: all 1s ease 0s;
 }
 
-.shadowButton{
+.transformButton{
     box-shadow: 3px 5px 5px black;
 }
+
+.transformButton:hover{
+    transform: rotate(30deg);
+    transition: all 1s ease 0s;
+}
+
 
 .selectAvatar{
     display: block;
