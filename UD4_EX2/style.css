@@ -37,6 +37,7 @@ body{
 }
 
 .transitionButton:hover{
+    animation: none;
     width: 200px;
     transition: all 1s ease 0s;
 }
