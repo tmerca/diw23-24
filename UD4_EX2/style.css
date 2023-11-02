@@ -1,3 +1,11 @@
+@keyframes jiggle{
+   0%{transform: rotate(0deg);}
+   25%{transform: rotate(5deg);}
+   50%{transform: rotate(0deg);}
+   75%{transform: rotate(-5deg);}
+   100%{transform: rotate(0deg);}
+}
+
 @font-face {
     font-family: Oswald;
     src: url(font/Oswald-VariableFont_wght.ttf);
@@ -24,20 +32,19 @@ body{
     border-radius: 5px;
 }
 
+.transitionButton{
+    animation: jiggle 0.5s infinite ease-in;
+}
+
 .transitionButton:hover{
     width: 200px;
     transition: all 1s ease 0s;
 }
 
-.transformButton{
-    box-shadow: 3px 5px 5px black;
-}
-
 .transformButton:hover{
-    transform: rotate(30deg);
-    transition: all 1s ease 0s;
+    transform: rotate(360deg);
+    transition: all 3s ease 0s;
 }
-
 
 .selectAvatar{
     display: block;
@@ -45,6 +52,7 @@ body{
 
 .input-type{
     border-radius: 7px;
+    box-shadow: 7px 7px 7px black;
 }
 
 input[type=radio] {
