@@ -1,12 +1,35 @@
+@keyframes shake{
+   0%{transform: rotate(0deg);}
+   25%{transform: rotate(5deg);}
+   50%{transform: rotate(0deg);}
+   75%{transform: rotate(-5deg);}
+   100%{transform: rotate(0deg);}
+}
+
+@keyframes jiggle {
+    0%{transform: translateX(0);}
+    25%{transform: translateX(5px);}
+    50%{transform: translateX(0);}
+    75%{transform: translateX(-5px);}
+    100%{transform: translateX(0);}
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(font/Oswald-VariableFont_wght.ttf);
+}
+
 body{
     background-image: url("img/background.png") !important;
+    font-family: "Oswald" !important;
 }
 
-button[class*=formButton]{
+.formButton{
+    background: linear-gradient(to top, #e6b980 0%, #d6ccc2 100%);
     background-color: #d6ccc2 !important;
+    width: 134.5px;
     border: solid black 2px !important;
 }
-
 
 .containerForm{
     background-color: transparent;
@@ -16,27 +39,49 @@ button[class*=formButton]{
     border-radius: 5px;
 }
 
+.formTitle{
+    color: white; 
+    animation: jiggle 1s infinite ease-in-out;
+}
+
+.transitionButton:hover{
+    width: 200px;
+    transition: all 1s ease 0s;
+}
+
+.transformButton:hover{
+    transform: rotate(20deg);
+    transition: all 1s ease 0s;
+}
+
 .selectAvatar{
     display: block;
 }
 
 .input-type{
     border-radius: 7px;
+    box-shadow: 7px 7px 7px black;
+}
+
+.input-type:hover{
+    animation: shake 0.3s ease-in;
 }
 
 input[type=radio] {
-    display: none;
+    display: none; 
+}
+
+input[type=radio]:hover + img,
+input[type=radio]:checked + img {
+    opacity: 100%;
+    max-width: 120px;
+    max-height: 120px;
+    transition: all 1s;
 }
 
 .imgAvatar{
     opacity: 50%;
     max-width: 90px;
     max-height: 90px;
+    transition: all 0.5s;
 }
-
-.imgAvatar:hover{
-    opacity: 100%;
-    max-width: 120px;
-    max-height: 120px;
-}
-
