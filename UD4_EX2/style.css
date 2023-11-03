@@ -1,9 +1,17 @@
-@keyframes jiggle{
+@keyframes shake{
    0%{transform: rotate(0deg);}
    25%{transform: rotate(5deg);}
    50%{transform: rotate(0deg);}
    75%{transform: rotate(-5deg);}
    100%{transform: rotate(0deg);}
+}
+
+@keyframes jiggle {
+    0%{transform: translateX(0);}
+    25%{transform: translateX(5px);}
+    50%{transform: translateX(0);}
+    75%{transform: translateX(-5px);}
+    100%{transform: translateX(0);}
 }
 
 @font-face {
@@ -17,27 +25,26 @@ body{
 }
 
 .formButton{
+    background: linear-gradient(to top, #e6b980 0%, #d6ccc2 100%);
     background-color: #d6ccc2 !important;
     width: 134.5px;
     border: solid black 2px !important;
 }
 
-
 .containerForm{
     background-color: transparent;
-    background: linear-gradient(to top, #e6b980 0%, #d6ccc2 100%);
     backdrop-filter: blur(10px);
     max-width: 400px !important;
     border: solid black 3px;
     border-radius: 5px;
 }
 
-.transitionButton{
-    animation: jiggle 0.5s infinite ease-in;
+.formTitle{
+    color: white; 
+    animation: jiggle 1s infinite ease-in-out;
 }
 
 .transitionButton:hover{
-    animation: none;
     width: 200px;
     transition: all 1s ease 0s;
 }
@@ -57,11 +64,19 @@ body{
 }
 
 .input-type:hover{
-    animation: jiggle 0.3s ease-in;
+    animation: shake 0.3s ease-in;
 }
 
 input[type=radio] {
-    display: none;
+    display: none; 
+}
+
+input[type=radio]:hover + img,
+input[type=radio]:checked + img {
+    opacity: 100%;
+    max-width: 120px;
+    max-height: 120px;
+    transition: all 1s;
 }
 
 .imgAvatar{
@@ -69,11 +84,4 @@ input[type=radio] {
     max-width: 90px;
     max-height: 90px;
     transition: all 0.5s;
-}
-
-.imgAvatar:hover{
-    opacity: 100%;
-    max-width: 120px;
-    max-height: 120px;
-    transition: all 1s;
 }
