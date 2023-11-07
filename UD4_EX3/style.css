@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Oswald;
+  src: url(font/Oswald-VariableFont_wght.ttf);
+}
+body {
+  background-color: #EDEDE9;
+  color: #484d62;
+  font-family: Oswald !important;
+}
+.article {
+  background-color: #D6CCC2;
+  border-radius: 6px;
+  border: solid black 2px;
+}
+.article .articleImage {
+  margin-top: 16px;
+  max-width: 350px;
+  max-height: 300px;
+  border-radius: 4px;
+}
+.article h1 {
+  font-size: 45px;
+}
+.article article {
+  font-size: 18px;
+}
