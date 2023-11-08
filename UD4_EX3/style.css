@@ -2,10 +2,45 @@
   font-family: Oswald;
   src: url(font/Oswald-VariableFont_wght.ttf);
 }
+header {
+  background-color: #D6CCC2;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 768px) {
+  header .button {
+    margin-left: 45%;
+    margin-bottom: 20px;
+  }
+}
+header .button {
+  background-color: #d5bdaf;
+  border: 2px solid black;
+  margin-top: 54px;
+}
+header .logoVertical {
+  max-width: 400px;
+  max-height: 300px;
+}
 body {
   background-color: #EDEDE9;
   color: #484d62;
   font-family: Oswald !important;
+}
+body a,
+body a:hover,
+body a:visited {
+  color: #484d62;
+}
+@media screen and (max-width: 1200px) {
+  body .topics {
+    margin-bottom: 20px;
+  }
+}
+body .topics {
+  border: solid black 1px;
+  border-radius: 5px;
+  background-color: #D6CCC2;
+  text-align: center;
 }
 .article {
   background-color: #D6CCC2;

@@ -3,6 +3,11 @@ body{
     color: #484d62;
 }
 
+a, a:hover, a:visited{
+    color: #484d62;
+    text-decoration: none;
+}
+
 .col1{
     max-width: 400px;
 }
