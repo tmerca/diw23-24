@@ -1,7 +1,7 @@
-@mainColor : #EDEDE9;
-@contentColor : #D6CCC2;
-@elementsColor : #d5bdaf;
-@fontColor : #484d62;
+$mainColor : #EDEDE9;
+$contentColor : #D6CCC2;
+$elementsColor : #d5bdaf;
+$fontColor : #484d62;
 
 @font-face {
     font-family: Oswald;
@@ -17,11 +17,11 @@ header {
         }       
     }
 
-    background-color: @contentColor;  
+    background-color: $contentColor;  
     margin-bottom: 100px;
 
     .button{
-        background-color: @elementsColor;
+        background-color: $elementsColor;
         border: 2px solid black;
         margin-top: 54px;
     }
@@ -34,33 +34,41 @@ header {
 }
 
 body{
-    background-color: @mainColor;
-    color: @fontColor;
+    background-color: $mainColor;
+    color: $fontColor;
     font-family: Oswald !important;
 
     a, a:hover, a:visited{
-        color: @fontColor;
+        color: $fontColor;
     }
 
     @media screen and (max-width: 1200px) {
-        .topics {
+        .topicBox {
             margin-bottom: 20px;
         }
 
     }
 
-    .topics{
+    .topicBox{
+        max-width: 120px !important ;
         border: solid black 1px;
         border-radius: 5px;
-        background-color: @contentColor;
+        background-color: $elementsColor;
         text-align: center;
     }
 
+    .topicsContainer{
+        max-width: 600px;
+        background-color: $contentColor;
+        border-radius: 6px;
+        border: solid black 2px;
+    }
+    
 }
 
 .article {
 
-    background-color: @contentColor;
+    background-color: $contentColor;
     border-radius: 6px;
     border: solid black 2px;
 

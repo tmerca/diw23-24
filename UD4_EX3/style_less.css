@@ -32,15 +32,34 @@ body a:visited {
   color: #484d62;
 }
 @media screen and (max-width: 1200px) {
-  body .topics {
+  body .topicBox {
     margin-bottom: 20px;
   }
 }
-body .topics {
+body .topicBox {
+  max-width: 120px !important ;
   border: solid black 1px;
   border-radius: 5px;
-  background-color: #D6CCC2;
+  background-color: #d5bdaf;
   text-align: center;
+}
+body .topicsContainer {
+  background-color: #D6CCC2;
+  border-radius: 6px;
+  border: solid black 2px;
+  max-width: 600px;
+}
+body .topicsContainer .articleImage {
+  margin-top: 16px;
+  max-width: 350px;
+  max-height: 300px;
+  border-radius: 4px;
+}
+body .topicsContainer h1 {
+  font-size: 45px;
+}
+body .topicsContainer article {
+  font-size: 18px;
 }
 .article {
   background-color: #D6CCC2;
