@@ -1,0 +1,10 @@
+$primary: teal;
+$secondary: green;
+
+$theme-colors:(
+    "primary": $primary,
+    "secondary": $secondary
+);
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
