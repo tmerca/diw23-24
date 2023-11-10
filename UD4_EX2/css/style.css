@@ -16,19 +16,18 @@
 
 @font-face {
     font-family: Oswald;
-    src: url(font/Oswald-VariableFont_wght.ttf);
+    src: url(../font/Oswald-VariableFont_wght.ttf);
 }
 
 body{
-    background-image: url("img/background.png") !important;
+    background-image: url("../img/background.png") !important;
     font-family: "Oswald" !important;
 }
 
 .formButton{
-    background: linear-gradient(to top, #e6b980 0%, #d6ccc2 100%);
-    background-color: #d6ccc2 !important;
+    /* background: linear-gradient(to top, #e6b980 0%, #d6ccc2 100%); */
     width: 134.5px;
-    border: solid black 2px !important;
+    /* border: solid black 2px !important; */
 }
  
 .containerForm{
