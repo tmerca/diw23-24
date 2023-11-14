@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    position: relative;
+}
+
+#bottom_header > ul {
+    text-align: center;
+}
+
+#bottom_header > div {
+    right: 0;
+    position: absolute;
+}
+
+.menu-element{
+    display: contents;
+}
+
+.menu-element > a {
+    margin: 0px 25px;
+    text-decoration: none;
+}
+
+a, a:hover, a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.image > img{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#top_header{
+    text-align: center;
+}
+
+aside {
+    position: static;
+    width: 100%;
+}
