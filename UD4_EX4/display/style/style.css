@@ -1,0 +1,128 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+#top_header {
+    text-align: center;
+}
+
+#top_header > img {
+    width: 120px;
+}
+
+#bottom_header > ul {
+    text-align: center;
+    padding: 0;
+}
+
+.menu-element {
+    display: contents;
+}
+
+.menu-element > a {
+    margin: 0 10px;
+}
+
+#bottom_header > div {
+    text-align: center; 
+}
+
+li {
+    list-style-type: none;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.menu2-element {
+    margin: 6px;
+}
+
+h1 {
+    margin: 0px 40px;
+}
+
+#products-filter {
+    margin-left: 40px;
+    background-color: lightgrey;
+    height: 60px;
+    position: sticky;
+    top: 0;
+}
+
+#products-filter > div {
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+#product-listing {
+    margin: 0;
+}
+
+article > .item-details > .product-name {
+    display: block;
+}
+
+.image-container > a > img {
+    width: 500px;
+}
+
+#back-to-top {
+    z-index: 1;
+    position: fixed;
+    right: 40px;
+    bottom: 40px; 
+}
+
+footer {
+    background-color: rgb(203, 203, 203);
+    text-align: center;
+    position: relative;
+}
+
+footer > ul > li {
+    padding-top: 6px;
+}
+
+footer > ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+}
+
+#load-more-products {
+    padding-left: 50%;
+}
+
+@media screen and (min-width: 750px){
+
+    main {
+        position: relative;
+    }
+    
+    header {
+        position: relative;
+    }
+
+    aside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 200px;
+    }
+
+    section {
+        margin-left: 200px;
+    }
+
+    article {
+        display: inline-block;
+    }
+}
