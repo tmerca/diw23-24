@@ -2,6 +2,14 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+main {
+    position: relative;
+}
+
+header {
+    position: relative;
+}
+
 #top_header {
     display: flex;
     justify-content: center;
@@ -45,6 +53,7 @@ h1 {
 #products-filter {
     display: flex;
     align-items: center;
+    position: sticky;
     margin-left: 40px;
     background-color: lightgrey;
     height: 60px;
@@ -57,4 +66,69 @@ h1 {
 
 #product-listing {
     margin: 0;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+#load-more-products {
+    padding-left: 50%;   
+}
+
+#back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+footer {
+    background-color: lightgrey;
+}
+
+footer > ul > li{
+    display: flex;
+    justify-content: center;
+}
+
+footer > div {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 650px) {
+    
+    #bottom_header > ul {
+        justify-content: center;
+    }
+
+    #bottom_header > ul > li {
+        margin: 0px 20px;
+    }
+
+    aside {
+        position: absolute;
+        top: 0;
+        max-width: 260px;
+        left: 0;
+    }
+
+    section {
+        margin-left: 260px;
+    }
+
+    #product-listing > li {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .image-container > a > img {
+        max-width: 380px;
+    }
+
+    article {
+        margin: 0 5px;
+    }
+
 }

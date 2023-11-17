@@ -70,7 +70,7 @@ article > .item-details > .product-name {
 }
 
 .image-container > a > img {
-    width: 500px;
+    width: 390px;
 }
 
 #back-to-top {
@@ -124,5 +124,14 @@ footer > ul {
 
     article {
         display: inline-block;
+    }
+
+}
+
+@media screen and (min-width: 960px) {
+    #bottom_header > div{
+        position: absolute;
+        right: 0;
+        bottom: 0;
     }
 }
