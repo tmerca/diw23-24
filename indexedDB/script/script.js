@@ -7,7 +7,7 @@ var opened = false;
 const REGISTER_USER = "Register";
 
 /*openCreateDb 
-  - Opens and/or creates an IndexedDB database
+  - Abre/Crea una base de datos IndexedDB
 */
 
 function openCreateDb(onDbCompleted) {
@@ -65,6 +65,7 @@ function sendData(){
   });
 }
 
+// FUNCION PARA AÑADIR UN USUARIO
   function addUser(db) {
 
     var username = document.getElementById("username");
@@ -87,9 +88,9 @@ function sendData(){
       console.log("addUser: Data insertion succesfully done. Id: " + e.target.result);
     
       /* Operations we want to do after inserting data      
-      clearFormInputs();
       */
-     readData();
+      clearFormInputs();
+      readData();
     };
     
     req.onerror = function(e) {
@@ -114,6 +115,7 @@ function sendData(){
 
 // Reads all the records from our ObjectStore
   function readUsers(db) {
+
     var tx = db.transaction(DB_STORE_NAME, "readonly"); 
     var store = tx.objectStore(DB_STORE_NAME);
   
