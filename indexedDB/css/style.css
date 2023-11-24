@@ -84,3 +84,7 @@ input[type=radio]:checked + img {
     max-height: 90px;
     transition: all 0.5s;
 }
+
+small {
+    visibility: hidden;
+}
