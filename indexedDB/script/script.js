@@ -56,7 +56,11 @@ function openCreateDb(onDbCompleted) {
     console.log("openCreateDb: Index created on useremail");
     store.createIndex("userpwd", "userpwd", { unique: false });
     console.log("openCreateDb: Index created on userpwd");
+    store.createIndex("useradmin", "useradmin", { unique : false });
+    console.log("openCreateDb: Index created on useradmin");
+    
   };
+
   req.onerror = function (e) {
     console.error(
       "openCreateDb: error opening or creating DB:",
@@ -76,10 +80,12 @@ function addUser(db) {
   var username = document.getElementById("username");
   var useremail = document.getElementById("useremail");
   var userpwd = document.getElementById("userpwd");
+  var useradmin = document.getElementById("useradmin");
   var obj = {
     username: username.value,
     useremail: useremail.value,
     userpwd: userpwd.value,
+    useradmin: useradmin.value,
   };
 
   // Start a new transaction in readwrite mode. We can use readonly also
@@ -196,28 +202,75 @@ function clearFormInputs() {
   document.getElementById("userpwd").value = "";
 }
 
-const register = document.getElementById("register");
-const username = document.getElementById("username");
-const useremail = document.getElementById("useremail");
-const userpwd = document.getElementById("userpwd");
+const register = document.getElementById('register');
 
 /*
-  COMPROBACIÓN FORMULARIO
+COMPROBACIÓN FORMULARIO
 */
 
-function checkLength(input, min, max) {
-  if (input.value.length < min) {
+// let pass = true;
+// const form = document.getElementById('form');
+// const username = document.getElementById('username');
+// const useremail = document.getElementById('useremail');
+// const userpwd = document.getElementById('userpwd');
 
-  } else if (input.value.length > max) {
+// function esObligatori(inputArray) {
 
-  }
-}
+//   inputArray.forEach((input) => {
+//     if(input.value.trim() === '') {
+//       pass = false;
+//       mostraError(input, `${prenNomInput(input)} és obligatori`);
+//     }
+//   });
 
-function mostraErro(input, missatge) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector('small');
-}
+// }
+
+// function comprovaLongitud(input, min, max) {
+//   if (input.value.length < min) {
+//     pass = false;
+//     mostraError(input, `${prenNomInput(input)} ha de tenir mínim ${min} caràcters`);
+//   } else if (input.value.length > max) {
+//     pass = false;
+//     mostraError(input, `${prenNomInput(input)} ha de tenir com a màxim ${max} caràcters`);
+//   }
+// }
+
+// function esEmailValid(input) {
+//   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+//   if(re.test(input.value.trim())){
+
+//   }else {
+//     let missatge = `${prenNomInput(input)} no té el format correcte`
+//     mostraError(input, missatge);
+//     pass = false;
+//   }
+
+// }
+
+// function mostraError(input, missatge) {
+
+//   const formControl = input.parentElement;
+//   const small = formControl.querySelector('small');
+//   small.innerText = missatge;
+// }
+
+// function prenNomInput(input) {
+//   return input.id.charAt(0).toUpperCase() * input.id.slice(1);
+// }
+
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault();
+
+//   esObligatori([username, useremail, userpwd]);
+
+//   comprovaLongitud(username, 3,15);
+//   comprovaLongitud(userpwd, 6, 25);
+
+//   esEmailValid(useremail);
+// });
 
 register.addEventListener("click", (e) => {
   sendData();
 });
+

@@ -66,7 +66,7 @@ body{
     animation: shake 0.3s ease-in;
 }
 
-input[type=radio] {
+input[type=radio]:not(#administrator) {
     display: none; 
 }
 

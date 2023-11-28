@@ -25,7 +25,7 @@
     </header>
     <main>
       <div class="container containerForm">
-        <form class="row g-3">
+        <form id="form" class="row g-3">
           <div class="col-12 my-3 formTitle">
             <h2>Registration Form</h2>
           </div>
@@ -41,7 +41,7 @@
               placeholder="peter123"
             />
           </div>
-          <small class="col-12 mb-4">Error message</small>
+          <small class="col-12 mb-4"></small>
           <div class="col-12">
             <label for="useremail"><strong>Email:</strong></label>
           </div>
@@ -54,7 +54,7 @@
               placeholder="email@example.com"
             />
           </div>
-          <small class="col-12 mb-4">Error message</small>
+          <small class="col-12 mb-4"></small>
           <div class="col-12">
             <label for="userpwd">
               <strong>Password:</strong>
@@ -69,7 +69,7 @@
               placeholder="Password"
             />
           </div>
-          <small class="col-12 mb-4">Error message</small>
+          <small class="col-12 mb-4"></small>
           <div class="col-12">
             <label for="avatar"
               ><strong>Choose your profile picture:</strong></label
@@ -100,12 +100,17 @@
             </div>
           </div>
           <div class="col-12 mb-3">
+            <input type="radio" name="administrator" id="administrator">
+            <label for="administrator"><strong>Administrator</strong></label>
+          </div>
+          <div class="col-12 mb-3">
             <button class="btn btn-primary formButton transformButton">
               Reset avatar selection
             </button>
           </div>
           <div class="col-12 mt-4 mb-4">
             <button
+            type="submit"
             id="register"
             class="btn btn-primary formButton transitionButton mb-3"
             >
