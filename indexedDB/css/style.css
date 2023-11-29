@@ -66,7 +66,7 @@ body{
     animation: shake 0.3s ease-in;
 }
 
-input[type=radio]:not(#administrator) {
+input[type=radio]:not(#useradmin) {
     display: none; 
 }
 
@@ -83,8 +83,4 @@ input[type=radio]:checked + img {
     max-width: 90px;
     max-height: 90px;
     transition: all 0.5s;
-}
-
-small {
-    visibility: hidden;
 }

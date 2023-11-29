@@ -41,7 +41,7 @@
               placeholder="peter123"
             />
           </div>
-          <small class="col-12 mb-4"></small>
+          <small id="smallUsername" class="col-12 mb-4"></small>
           <div class="col-12">
             <label for="useremail"><strong>Email:</strong></label>
           </div>
@@ -54,7 +54,7 @@
               placeholder="email@example.com"
             />
           </div>
-          <small class="col-12 mb-4"></small>
+          <small id="smallUseremail" class="col-12 mb-4"></small>
           <div class="col-12">
             <label for="userpwd">
               <strong>Password:</strong>
@@ -69,10 +69,9 @@
               placeholder="Password"
             />
           </div>
-          <small class="col-12 mb-4"></small>
+          <small id="smallUserpwd" class="col-12 mb-4"></small>
           <div class="col-12">
-            <label for="avatar"
-              ><strong>Choose your profile picture:</strong></label
+            <label><strong>Choose your profile picture:</strong></label
             >
           </div>
           <div class="col-12 mb-3">
@@ -100,8 +99,8 @@
             </div>
           </div>
           <div class="col-12 mb-3">
-            <input type="radio" name="administrator" id="administrator">
-            <label for="administrator"><strong>Administrator</strong></label>
+            <input type="checkbox" name="admin" id="useradmin">
+            <label for="useradmin"><strong>Administrator</strong></label>
           </div>
           <div class="col-12 mb-3">
             <button class="btn btn-primary formButton transformButton">

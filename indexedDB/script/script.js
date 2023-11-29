@@ -80,12 +80,16 @@ function addUser(db) {
   var username = document.getElementById("username");
   var useremail = document.getElementById("useremail");
   var userpwd = document.getElementById("userpwd");
-  var useradmin = document.getElementById("useradmin");
+  var checkAdmin = "false";
+  if(document.getElementById('useradmin').checked){
+    checkAdmin = "true";
+  }
+
   var obj = {
     username: username.value,
     useremail: useremail.value,
     userpwd: userpwd.value,
-    useradmin: useradmin.value,
+    useradmin: checkAdmin,
   };
 
   // Start a new transaction in readwrite mode. We can use readonly also
@@ -181,8 +185,6 @@ function readUser(e) {
       var record = e.target.result;
       console.log(record);
 
-      //Operations to do after reading a user
-      // updateFormInputsToEdit(record);
     };
 
     req.onerror = function (e) {
@@ -202,75 +204,40 @@ function clearFormInputs() {
   document.getElementById("userpwd").value = "";
 }
 
+// ELEMENTS CAUGHT WITH DOM
 const register = document.getElementById('register');
+const username = document.getElementById('username');
+const useremail = document.getElementById('useremail');
+const userpwd = document.getElementById('userpwd');
 
-/*
-COMPROBACIÓN FORMULARIO
-*/
+const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+let isValid = true;
 
-// let pass = true;
-// const form = document.getElementById('form');
-// const username = document.getElementById('username');
-// const useremail = document.getElementById('useremail');
-// const userpwd = document.getElementById('userpwd');
-
-// function esObligatori(inputArray) {
-
-//   inputArray.forEach((input) => {
-//     if(input.value.trim() === '') {
-//       pass = false;
-//       mostraError(input, `${prenNomInput(input)} és obligatori`);
-//     }
-//   });
-
-// }
-
-// function comprovaLongitud(input, min, max) {
-//   if (input.value.length < min) {
-//     pass = false;
-//     mostraError(input, `${prenNomInput(input)} ha de tenir mínim ${min} caràcters`);
-//   } else if (input.value.length > max) {
-//     pass = false;
-//     mostraError(input, `${prenNomInput(input)} ha de tenir com a màxim ${max} caràcters`);
-//   }
-// }
-
-// function esEmailValid(input) {
-//   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-//   if(re.test(input.value.trim())){
-
-//   }else {
-//     let missatge = `${prenNomInput(input)} no té el format correcte`
-//     mostraError(input, missatge);
-//     pass = false;
-//   }
-
-// }
-
-// function mostraError(input, missatge) {
-
-//   const formControl = input.parentElement;
-//   const small = formControl.querySelector('small');
-//   small.innerText = missatge;
-// }
-
-// function prenNomInput(input) {
-//   return input.id.charAt(0).toUpperCase() * input.id.slice(1);
-// }
-
-// form.addEventListener('submit', (e) => {
-//   e.preventDefault();
-
-//   esObligatori([username, useremail, userpwd]);
-
-//   comprovaLongitud(username, 3,15);
-//   comprovaLongitud(userpwd, 6, 25);
-
-//   esEmailValid(useremail);
-// });
 
 register.addEventListener("click", (e) => {
-  sendData();
+  if(username.textContent === ""){
+    document.getElementById('smallUsername').innerText = "Username can't be empty";
+    isValid = false;
+  }
+  
+  if(username.textContent === ""){
+    isValid = false;
+  }
+  
+  if(userpwd.textContent === "") {
+    isValid = false;
+  }
+  
+  //sendData();
 });
 
+/*
+  CHECKING THAT THE INFORMATION OF THE FORM IS VALID
+*/
+
+
+
+
+// window.addEventListener("load", (e) => {
+//   readData();
+// });
