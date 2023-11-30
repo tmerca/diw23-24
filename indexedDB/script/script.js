@@ -10,6 +10,7 @@ const DB_VERSION = 1;
 var db;
 var opened = false;
 const REGISTER_USER = "Register";
+let checkAdmin = "true";
 
 /*openCreateDb 
   - Abre/Crea una base de datos IndexedDB
@@ -69,7 +70,7 @@ function openCreateDb(onDbCompleted) {
   };
 }
 
-function sendData() {
+function sendData(checkAdmin) {
   openCreateDb(function (db) {
     addUser(db);
   });
@@ -80,7 +81,7 @@ function addUser(db) {
   var username = document.getElementById("username");
   var useremail = document.getElementById("useremail");
   var userpwd = document.getElementById("userpwd");
-  var checkAdmin = "false";
+  checkAdmin = "false";
   if(document.getElementById('useradmin').checked){
     checkAdmin = "true";
   }
@@ -108,8 +109,12 @@ function addUser(db) {
       "addUser: Data insertion succesfully done. Id: " + e.target.result
     );
 
-    /* Operations we want to do after inserting data
-     */
+    if(checkAdmin == "true"){
+      window.location.replace("../adminPage/index.html");
+    }else{
+      window.location.replace("../UD1_EX4/mainPage.html");
+    }
+      
     clearFormInputs();
     readData();
   };
@@ -215,28 +220,32 @@ let isValid = true;
 
 
 register.addEventListener("click", (e) => {
-  if(username.textContent === ""){
+  console.log(username.value);
+  if(username.value === ''){
     document.getElementById('smallUsername').innerText = "Username can't be empty";
     isValid = false;
   }
   
-  if(username.textContent === ""){
+  if(useremail.value === ''){
+    document.getElementById('smallUseremail').innerText = "User email can't be empty";
     isValid = false;
   }
   
-  if(userpwd.textContent === "") {
+  if(userpwd.value === '') {
+    document.getElementById('smallUserpwd').innerText = "Password can't be empty";
     isValid = false;
   }
-  
-  //sendData();
+
+  if(isValid == true){
+    sendData(checkAdmin);
+    
+  }
+
 });
 
 /*
   CHECKING THAT THE INFORMATION OF THE FORM IS VALID
 */
-
-
-
 
 // window.addEventListener("load", (e) => {
 //   readData();
