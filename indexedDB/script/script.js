@@ -59,6 +59,8 @@ function openCreateDb(onDbCompleted) {
     console.log("openCreateDb: Index created on userpwd");
     store.createIndex("useradmin", "useradmin", { unique : false });
     console.log("openCreateDb: Index created on useradmin");
+    store.createIndex("userimg", "userimg", { unique : false});
+    console.log("openCreateDb: Index created on userimg");
     
   };
 
@@ -82,6 +84,22 @@ function addUser(db) {
   var useremail = document.getElementById("useremail");
   var userpwd = document.getElementById("userpwd");
   checkAdmin = "false";
+  var pathImg ="";
+  var userimg1 = document.getElementById("radioImage1");
+  var userimg2 = document.getElementById("radioImage2");
+  var userimg3 = document.getElementById("radioImage3");
+
+  if(userimg1.checked){
+    pathImg = userimg1.getAttribute("path1");
+    console.log(pathImg);
+  }else if(userimg2.checked){
+    pathImg = userimg2.getAttribute("path2");
+    console.log(pathImg);
+  } else {
+    pathImg = userimg3.getAttribute("path3");
+    console.log(pathImg);
+  }
+
   if(document.getElementById('useradmin').checked){
     checkAdmin = "true";
   }
@@ -91,6 +109,7 @@ function addUser(db) {
     useremail: useremail.value,
     userpwd: userpwd.value,
     useradmin: checkAdmin,
+    userimg: pathImg,
   };
 
   // Start a new transaction in readwrite mode. We can use readonly also
@@ -112,7 +131,7 @@ function addUser(db) {
     if(checkAdmin == "true"){
       window.location.replace("../adminPage/index.html");
     }else{
-      window.location.replace("../UD1_EX4/mainPage.html");
+      window.location.replace("../mainPage/mainPage.html");
     }
       
     clearFormInputs();
@@ -154,7 +173,6 @@ function readUsers(db) {
       cursor.continue();
     } else {
       console.log("EOF");
-      console.log(result);
       //Operations to do after reading all the records
       // addUsersToHTML(result)
     }
@@ -220,6 +238,7 @@ let isValid = true;
 
 
 register.addEventListener("click", (e) => {
+  
   console.log(username.value);
   if(username.value === ''){
     document.getElementById('smallUsername').innerText = "Username can't be empty";
@@ -236,17 +255,37 @@ register.addEventListener("click", (e) => {
     isValid = false;
   }
 
+  esEmailValid(useremail);
+
   if(isValid == true){
     sendData(checkAdmin);
-    
   }
 
+
 });
+
+function esEmailValid(useremail) {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  if(re.test(useremail.value.trim())){
+  }else {
+    isValid = false;
+    document.getElementById('smallUseremail').innerText = "User email is not correct";
+  }
+
+}
+
+function esContrassenyaValida(userpwd) {
+  
+}
 
 /*
   CHECKING THAT THE INFORMATION OF THE FORM IS VALID
 */
 
-// window.addEventListener("load", (e) => {
-//   readData();
-// });
+//  window.addEventListener("load", (e) => {
+//    readData();
+//  });
+
+
+// getAttribute
