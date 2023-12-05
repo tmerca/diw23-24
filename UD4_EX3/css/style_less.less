@@ -1,0 +1,90 @@
+@mainColor : #EDEDE9;
+@contentColor : #D6CCC2;
+@elementsColor : #d5bdaf;
+@fontColor : #484d62;
+
+@font-face {
+    font-family: Oswald;
+    src: url(font/Oswald-VariableFont_wght.ttf);
+}
+
+header {
+
+    @media screen and(max-width: 768px){
+        .button{
+            margin-left: 45%;
+            margin-bottom: 20px;
+        }       
+    }
+
+    background-color: @contentColor;  
+    margin-bottom: 100px;
+
+    .button{
+        background-color: @elementsColor;
+        border: 2px solid black;
+        margin-top: 54px;
+    }
+
+    .logoVertical{
+        max-width: 400px;
+        max-height: 300px;
+    }
+
+}
+
+body{
+    background-color: @mainColor;
+    color: @fontColor;
+    font-family: Oswald !important;
+
+    a, a:hover, a:visited{
+        color: @fontColor;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .topicBox {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    .topicBox{
+        max-width: 120px !important ;
+        border: solid black 1px;
+        border-radius: 5px;
+        background-color: @elementsColor;
+        text-align: center;
+    }
+
+    .topicsContainer{
+
+        .article;
+        max-width: 600px;
+
+    }
+
+}
+
+.article {
+
+    background-color: @contentColor;
+    border-radius: 6px;
+    border: solid black 2px;
+
+    img{
+        margin-top: 16px;
+        max-width: 350px;
+        max-height: 300px;
+        border-radius: 4px;
+    }
+    
+    h1{
+        font-size: 45px;
+    }
+
+    article{
+        font-size: 18px;
+    }
+
+}

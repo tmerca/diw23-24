@@ -3,19 +3,32 @@ body{
     color: #484d62;
 }
 
-a, a:hover, a:visited{
-    color: #484d62;
-    text-decoration: none;
+.col1{
+    /* max-width: 400px; */
 }
 
-.col1{
-    max-width: 400px;
+.welcome {
+    width: 125px;
+    display: flex;
+    justify-content: center;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: #484d62;
+}
+
+header a:hover, header a:visited, a{
+    color: white;
 }
 
 .logoVertical{
-    width: 250px;
+    /* width: 250px;
     height: 188px;
-    float: left;
+    float: left; */
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
 }
 
 .mainHeader{
@@ -25,38 +38,38 @@ a, a:hover, a:visited{
     height: 200px;
 }
 
+
 .mainLogo{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 50px;
     margin-top: 60px;
 }
 
-.btnLogIn{
-    margin-top: 30px;
-    margin-left: 15px;
-    background-color:  #D5BDAF;
+button {
+    background-color: #484d62 !important;
+    color: white !important;
 }
 
-.btnFilterBy {
-    margin-top: 75px;
-    background-color:  #D5BDAF;
+.colButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.btnRegister{
-    margin-top: 50px;
-    background-color:#D5BDAF;
+.card-text {
+    margin-bottom: 60px;
 }
 
 .cardArticles{
-    margin-left: 5%;
-    margin-top: 40px;
+    /* margin-left: 5%; */
+    /* margin-top: 40px; */
     background-color: #D6CCC2;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     border-radius: 10px;
 }
 
 .imgUser{
-    margin-left: 50px;
+    /* margin-left: 50px; */
     margin-top: 30px;
     max-width: 128px;
     max-height: 128px;
@@ -66,8 +79,8 @@ a, a:hover, a:visited{
     margin-left: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
-    max-width: 400px;
-    max-height: 200px;
+    /* max-width: 400px; */
+    /* max-height: 200px; */
     border-radius: 5px;
 }
 
@@ -85,16 +98,16 @@ a, a:hover, a:visited{
 }
 
 .topicBox{
-    margin-top: 40px;
-    margin-right: 50px;
+    /* margin-top: 40px; */
+    /* margin-right: 50px; */
     background-color: #D6CCC2;
-    max-height: 234px;
+    /* max-height: 234px; */
     width: 200px;
 }
 
 .topicBox2{
     margin-top: 40px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     background-color: #D6CCC2;
     max-height: 234px;
     width: 200px;
@@ -102,7 +115,7 @@ a, a:hover, a:visited{
 
 .colTpc {
     margin-top: 20px;
-    margin-left: 6px;
+    /* margin-left: 6px; */
 }
 
 .colTpc2{
@@ -118,15 +131,8 @@ a, a:hover, a:visited{
 }
 
 .likeImage{
-    margin-top: 110px;
-    margin-left: 50px;
-    max-width: 95px;
-    max-height: 95px;
-}
-
-.likeImage2{
-    margin-top: 110px;
-    margin-left: 120px;
-    max-width: 95px;
-    max-height: 95px;
+    /* margin-top: 110px;
+    margin-left: 50px; */
+    max-width: 20px;
+    /* max-height: 95px; */
 }

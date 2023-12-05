@@ -1,191 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Your Life</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-</head>
-
-<body>
-  <div class="mainHeader">
-    <div class="row">
-      <div class="col col1">
-        <img class="logoVertical" src="img/logoGimpVertical.png" />
-      </div>
-      <div class="col mainColumn">
-        <div class="mainLogo">
-          <p>Welcome to Blog Your Life</p>
+  <body>
+    <header class="mainHeader container-fluid">
+      <div class="row">
+        <div class="col-auto col-lg-2 col1">
+          <img class="logoVertical" src="img/logoGimpVertical.png" />
         </div>
-      </div>
-      <div class="col col3">
-        <div class="row">
-          <div class="col-md-4">
-            <button class="btn btnFilterBy" type="submit">Filter By...</button>
+        <div class="col-lg-6 mainColumn d-none d-lg-block">
+          <div class="mainLogo">
+            <p>Welcome to Blog Your Life</p>
           </div>
-          <div class="col-md-4">
-            <button class="btn btnLogIn" type="submit">Log In</button>
-            <div class="col">
-              <button class="btn btnRegister" type="submit">Register</button>
+        </div>
+        <div class="col-auto col-lg-4">
+          <div class="row">
+            <div class="col-6 colButtons">
+              <div class="row mt-4">
+                <div class="col-6">
+                  <button class="btn btnLogIn" type="submit"><a href="../indexedDB/index.html">Log In</a></button>
+                </div>
+                <div class="col-6">
+                  <button class="btn btnRegister" type="submit">
+                    Register
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <img class="imgUser" src="img/user.png" id="userimg"/>
+              <div id="username" class="welcome">Anonymous</div>
             </div>
           </div>
-          <div class="col-md-4">
-            <img class="imgUser" src="img/user.png">
-          </div>
         </div>
+      </div>
+    </header>
+    <main class="container-fluid">
+      <div class="row p-3 article">
+        <a href="../UD4_EX3/article.html">
+          <div class="col-12 col-md-10 py-3">
+            <div class="card-md-9 cardArticles">
+              <div class="row g-0">
+                <div class="col-12 col-md-4">
+                  <img
+                    src="img/fff.png"
+                    class="img-fluid rounded-start articleImage"
+                  />
+                </div>
+                <div class="col-12 col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title articleTitle">Title</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Rerum ducimus dignissimos inventore ratione, voluptatum
+                      repellat aliquam cupiditate facilis ullam ad similique
+                      quae quos eveniet dolor quam, quas impedit odio expedita
+                      ex doloribus consectetur! Labore impedit eveniet,
+                      consequatur reprehenderit aliquid dolorem eius sequi quod
+                      sunt, repudiandae, quidem rerum! Dolorem blanditiis illo
+                      repellat soluta perferendis tempore nesciunt, a magni
+                      dolore, quasi aperiam possimus. Unde pariatur corporis
+                      numquam velit omnis et ex dolorem, quos necessitatibus
+                      labore perspiciatis, placeat corrupti sunt quis veniam!
+                      Eius.
+                    </p>
+
+                    <p></p>
+                    <div class="row">
+                      <div class="col">
+                        <img class="likeImage" src="img/heart.png" />
+                      </div>
+                      <div class="col">
+                        <button class="btn topics">Topic 1</button>
+                      </div>
+                      <div class="col">
+                        <button class="btn topics">Topic 2</button>
+                      </div>
+                      <div class="col">
+                        <button class="btn topics">Topic 3</button>
+                      </div>
+                      <div class="col">
+                        <button class="btn topics">Topic 4</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- <div class="col-md-2">
         
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <a href="../UD4_EX3/article.html">
-        <div class="card-md-9 cardArticles">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="img/fff.png" class="img-fluid rounded-start articleImage" />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title articleTitle">Title</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Rerum ducimus dignissimos inventore ratione, voluptatum
-                  repellat aliquam cupiditate facilis ullam ad similique quae
-                  quos eveniet dolor quam, quas impedit odio expedita ex
-                  doloribus consectetur! Labore impedit eveniet, consequatur
-                  reprehenderit aliquid dolorem eius sequi quod sunt,
-                  repudiandae, quidem rerum! Dolorem blanditiis illo repellat
-                  soluta perferendis tempore nesciunt, a magni dolore, quasi
-                  aperiam possimus. Unde pariatur corporis numquam velit omnis
-                  et ex dolorem, quos necessitatibus labore perspiciatis,
-                  placeat corrupti sunt quis veniam! Eius.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="col-md-2">
-      <img class="likeImage" src="img/heart.png">
-    </div>
-    <div class="card topicBox">
-      <ul class="list-group list-group-flush">
-        <div class="row">
-          <div class="col colTpc">
-            <button class="btn topics tpc1">Topic 1</button>
-            <button class="btn topics">Topic 3</button>
-          </div>
-          <div class="col colTpc2">
-            <button class="btn topics tpc2">Topic 2</button>
-            <button class="btn topics">Topic 4</button>
-          </div>
-        </div>
-      </ul>
-    </div>
-  </div>
-  <div class="row">
-    
-    <div class="card topicBox2">
-      <ul class="list-group list-group-flush">
-        <div class="row">
-          <div class="col colTpc">
-            <button class="btn topics tpc1">Topic 1</button>
-            <button class="btn topics">Topic 3</button>
-          </div>
-          <div class="col colTpc2">
-            <button class="btn topics tpc2">Topic 2</button>
-            <button class="btn topics">Topic 4</button>
-          </div>
-        </div>
-      </ul>
-    </div>
-    <div class="col-md-2">
-      <img class="likeImage2" src="img/heart.png">
-    </div>
-    <div class="col">
-      <a href="../UD4_EX3/article.html">
-        <div class="card-md-9 cardArticles">
-          <div class="row g-0">
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title articleTitle">Title</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Rerum ducimus dignissimos inventore ratione, voluptatum
-                  repellat aliquam cupiditate facilis ullam ad similique quae
-                  quos eveniet dolor quam, quas impedit odio expedita ex
-                  doloribus consectetur! Labore impedit eveniet, consequatur
-                  reprehenderit aliquid dolorem eius sequi quod sunt,
-                  repudiandae, quidem rerum! Dolorem blanditiis illo repellat
-                  soluta perferendis tempore nesciunt, a magni dolore, quasi
-                  aperiam possimus. Unde pariatur corporis numquam velit omnis
-                  et ex dolorem, quos necessitatibus labore perspiciatis,
-                  placeat corrupti sunt quis veniam! Eius.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <img src="img/fff.png" class="img-fluid rounded-start articleImage2" />
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>  
-  </div>
-  <div class="row">
-    <div class="col">
-      <a href="../UD4_EX3/article.html">
-        <div class="card-md-9 cardArticles">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="img/fff.png" class="img-fluid rounded-start articleImage" />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title articleTitle">Title</h5>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Rerum ducimus dignissimos inventore ratione, voluptatum
-                  repellat aliquam cupiditate facilis ullam ad similique quae
-                  quos eveniet dolor quam, quas impedit odio expedita ex
-                  doloribus consectetur! Labore impedit eveniet, consequatur
-                  reprehenderit aliquid dolorem eius sequi quod sunt,
-                  repudiandae, quidem rerum! Dolorem blanditiis illo repellat
-                  soluta perferendis tempore nesciunt, a magni dolore, quasi
-                  aperiam possimus. Unde pariatur corporis numquam velit omnis
-                  et ex dolorem, quos necessitatibus labore perspiciatis,
-                  placeat corrupti sunt quis veniam! Eius.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      
-    </div>
-    <div class="col-md-2">
-      <img class="likeImage" src="img/heart.png">
-    </div>
-    <div class="card topicBox">
-      <ul class="list-group list-group-flush">
-        <div class="row">
-          <div class="col colTpc">
-            <button class="btn topics tpc1">Topic 1</button>
-            <button class="btn topics">Topic 3</button>
-          </div>
-          <div class="col colTpc2">
-            <button class="btn topics tpc2">Topic 2</button>
-            <button class="btn topics">Topic 4</button>
-          </div>
-        </div>
-      </ul>
-    </div>
-  </div>
-</body>
+      </div>-->
 
+      <div class="row" style="display: none">
+        <div class="card topicBox2">
+          <ul class="list-group list-group-flush">
+            <div class="row">
+              <div class="col colTpc">
+                <button class="btn topics tpc1">Topic 1</button>
+                <button class="btn topics">Topic 3</button>
+              </div>
+              <div class="col colTpc2">
+                <button class="btn topics tpc2">Topic 2</button>
+                <button class="btn topics">Topic 4</button>
+              </div>
+            </div>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <img class="likeImage2" src="img/heart.png" />
+        </div>
+        <div class="col">
+          <div class="card-md-9 cardArticles">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title articleTitle">Title</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Rerum ducimus dignissimos inventore ratione, voluptatum
+                    repellat aliquam cupiditate facilis ullam ad similique quae
+                    quos eveniet dolor quam, quas impedit odio expedita ex
+                    doloribus consectetur! Labore impedit eveniet, consequatur
+                    reprehenderit aliquid dolorem eius sequi quod sunt,
+                    repudiandae, quidem rerum! Dolorem blanditiis illo repellat
+                    soluta perferendis tempore nesciunt, a magni dolore, quasi
+                    aperiam possimus. Unde pariatur corporis numquam velit omnis
+                    et ex dolorem, quos necessitatibus labore perspiciatis,
+                    placeat corrupti sunt quis veniam! Eius.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <img
+                  src="img/fff.png"
+                  class="img-fluid rounded-start articleImage2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="display: none">
+        <div class="col">
+          <div class="card-md-9 cardArticles">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img
+                  src="img/fff.png"
+                  class="img-fluid rounded-start articleImage"
+                />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title articleTitle">Title</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Rerum ducimus dignissimos inventore ratione, voluptatum
+                    repellat aliquam cupiditate facilis ullam ad similique quae
+                    quos eveniet dolor quam, quas impedit odio expedita ex
+                    doloribus consectetur! Labore impedit eveniet, consequatur
+                    reprehenderit aliquid dolorem eius sequi quod sunt,
+                    repudiandae, quidem rerum! Dolorem blanditiis illo repellat
+                    soluta perferendis tempore nesciunt, a magni dolore, quasi
+                    aperiam possimus. Unde pariatur corporis numquam velit omnis
+                    et ex dolorem, quos necessitatibus labore perspiciatis,
+                    placeat corrupti sunt quis veniam! Eius.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <img class="likeImage" src="img/heart.png" />
+        </div>
+        <div class="card topicBox">
+          <ul class="list-group list-group-flush">
+            <div class="row">
+              <div class="col colTpc">
+                <button class="btn topics tpc1">Topic 1</button>
+                <button class="btn topics">Topic 3</button>
+              </div>
+              <div class="col colTpc2">
+                <button class="btn topics tpc2">Topic 2</button>
+                <button class="btn topics">Topic 4</button>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="script/script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="css/custom.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <header>
+      <div class="mainHeader">
+        <div class="row">
+          <div class="col col1">
+            <img class="logoVertical" src="img/logoGimpHoritzontal.png" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container containerForm">
+        <div id="form" class="row g-3">
+          <div class="col-12 my-3 formTitle">
+            <h2>Registration Form</h2>
+          </div>
+          <div class="col-12">
+            <label for="username"><strong>Username:</strong></label>
+          </div>
+          <div class="col-12 mb-3">
+            <input
+              id="username"
+              class="input-type"
+              type="text"
+              name="username"
+              placeholder="peter123"
+            />
+          </div>
+          <small id="smallUsername" class="col-12 mb-4"></small>
+          <div class="col-12">
+            <label for="useremail"><strong>Email:</strong></label>
+          </div>
+          <div class="col-12 mb-3">
+            <input
+              id="useremail"
+              class="input-type"
+              type="email"
+              name="useremail"
+              placeholder="email@example.com"
+            />
+          </div>
+          <small id="smallUseremail" class="col-12 mb-4"></small>
+          <div class="col-12">
+            <label for="userpwd">
+              <strong>Password:</strong>
+            </label>
+          </div>
+          <div class="col-12 mb-3">
+            <input
+              id="userpwd"
+              class="input-type"
+              type="text"
+              name="userpwd"
+              placeholder="Password"
+            />
+          </div>
+          <small id="smallUserpwd" class="col-12 mb-4"></small>
+          <div class="col-12">
+            <label><strong>Choose your profile picture:</strong></label
+            >
+          </div>
+          <div class="col-12 mb-3">
+            <div class="row">
+              <div class="col-3 mx-3">
+                <label for="radioImage1">
+                  <input type="radio" name="radioImage" id="radioImage1" path1="img/image1.png"/>
+                  <img class="imgAvatar" src="img/image1.png" />
+                </label>
+              </div>
+
+              <div class="col-3 mx-1">
+                <label for="radioImage2">
+                  <input type="radio" name="radioImage" id="radioImage2" path2="img/image2.png"  />
+                  <img class="imgAvatar" src="img/image2.png"/>
+                </label>
+              </div>
+
+              <div class="col-3 mx-3 mb-3">
+                <label for="radioImage3">
+                  <input type="radio" name="radioImage" id="radioImage3" path3="img/image3.png"  />
+                  <img class="imgAvatar" src="img/image3.png"/>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mb-3">
+            <input type="checkbox" name="admin" id="useradmin">
+            <label for="useradmin"><strong>Administrator</strong></label>
+          </div>
+          <div class="col-12 mb-3">
+            <button class="btn btn-primary formButton transformButton">
+              Reset avatar selection
+            </button>
+          </div>
+          <div class="col-12 mt-4 mb-4">
+            <button
+            type="submit"
+            id="register"
+            class="btn btn-primary formButton transitionButton mb-3"
+            >
+            <strong>Register</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script/script.js"></script>
+  </body>
+</html>

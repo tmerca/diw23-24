@@ -1,0 +1,79 @@
+@font-face {
+  font-family: Oswald;
+  src: url(font/Oswald-VariableFont_wght.ttf);
+}
+
+header {
+  background-color: #D6CCC2;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  header .button {
+    margin-left: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+header .button {
+  background-color: #d5bdaf;
+  border: 2px solid black;
+  margin-top: 54px;
+}
+
+header .logoVertical {
+  max-width: 400px;
+  max-height: 300px;
+}
+
+body {
+  background-color: #EDEDE9;
+  color: #484d62;
+  font-family: Oswald !important;
+}
+
+body a, body a:hover, body a:visited {
+  color: #484d62;
+}
+
+@media screen and (max-width: 1200px) {
+  body .topicBox {
+    margin-bottom: 20px;
+  }
+}
+
+body .topicBox {
+  max-width: 120px !important;
+  border: solid black 1px;
+  border-radius: 5px;
+  background-color: #d5bdaf;
+  text-align: center;
+}
+
+body .topicsContainer {
+  max-width: 600px;
+  background-color: #D6CCC2;
+  border-radius: 6px;
+  border: solid black 2px;
+}
+
+.article {
+  background-color: #D6CCC2;
+  border-radius: 6px;
+  border: solid black 2px;
+}
+
+.article .articleImage {
+  margin-top: 16px;
+  max-width: 350px;
+  max-height: 300px;
+  border-radius: 4px;
+}
+
+.article h1 {
+  font-size: 45px;
+}
+
+.article article {
+  font-size: 18px;
+}
