@@ -91,13 +91,12 @@ function addUser(db) {
 
   if(userimg1.checked){
     pathImg = userimg1.getAttribute("path1");
-    console.log(pathImg);
   }else if(userimg2.checked){
     pathImg = userimg2.getAttribute("path2");
-    console.log(pathImg);
-  } else {
+  } else if(userimg3.checked){
     pathImg = userimg3.getAttribute("path3");
-    console.log(pathImg);
+  } else{
+    pathImg = "";
   }
 
   if(document.getElementById('useradmin').checked){
@@ -129,7 +128,7 @@ function addUser(db) {
     );
 
     if(checkAdmin == "true"){
-      window.location.replace("../adminPage/index.html");
+      window.location.replace("../adminPage/adminPage.html");
     }else{
       window.location.replace("../mainPage/mainPage.html");
     }
