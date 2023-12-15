@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <canvas id="canvas"></canvas>
-    <script src="script.js"></script>
+    <main>
+        <canvas id="canvas"  width=850" height="400"  style="border: grey 3px solid"></canvas>
+        <div id="buttons">
+            <div id="runStop">
+                <button id="run">Run</button>
+                <button id="stop">Stop</button>
+            </div>
+            <div id="speedButtons">
+                <button id="speedX">Speed X</button>
+                <button id="speedY">Speed Y</button>
+                <button id="slowX">Slow X</button>
+                <button id="slowY">Slow Y</button>
+            </div>
+        </div>
+    </main>
+        <script src="script.js"></script>
 </body>
 </html>

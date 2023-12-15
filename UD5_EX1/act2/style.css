@@ -1,0 +1,27 @@
+* {
+    background-color: lightgreen;
+    margin: 0 auto;
+}
+
+main {
+    width: fit-content;
+}
+
+#canvas {
+    margin-top: 40px;
+}
+
+button {
+    background: white;
+    font-size: 20px;
+}
+
+#buttons {
+    padding-top: 30px;
+    display: block;
+    text-align: center;
+}
+
+#runStop {
+    margin: 30px 0;
+}
