@@ -9,7 +9,7 @@ const DB_STORE_NAME = "users";
 const DB_VERSION = 1;
 var db;
 var opened = false;
-let users = document.getElementById("users");
+let users = document.getElementById('users');
 
 function openCreateDb(onDbCompleted) {
   if (opened) {
@@ -54,8 +54,9 @@ function openCreateDb(onDbCompleted) {
     console.log("openCreateDb: Index created on userpwd");
     store.createIndex("useradmin", "useradmin", { unique: false });
     console.log("openCreateDb: Index created on useradmin");
-    store.createIndex("userimg", "userimg", { unique: false });
+    store.createIndex("userimg", "userimg", { unique : false});
     console.log("openCreateDb: Index created on userimg");
+
   };
 
   req.onerror = function (e) {
@@ -84,13 +85,45 @@ function readUsers(db) {
 
     if (cursor) {
       result.push(cursor.value);
-      // console.log(cursor.value);
+      console.log(cursor.value);
+      startSession();
       cursor.continue();
     } else {
       console.log("EOF");
       //Operations to do after reading all the records
-      showUsers(result);
+      // addUsersToHTML(result)
     }
+
+    function startSession() {
+        if(cursor.value.useradmin == "false"){
+            let userimg = document.getElementById('userimg');
+            if(cursor.value.userimg == "img/image1.png"){
+                userimg.src = "img/image1.png";
+            } else if(cursor.value.userimg == "img/image2.png"){
+                userimg.src = "img/image2.png";
+            } else if(cursor.value.userimg == "img/image3.png") {
+                userimg.src = "img/image3.png";
+            } else {
+              userimg.src = "img/user.png";
+            }
+        }
+        if(cursor.value.username) {
+          document.getElementById('username').innerText = cursor.value.username;
+          document.getElementById('useremail').innerHTML = cursor.value.useremail;
+          document.getElementById('userpwd').innerHTML = cursor.value.userpwd;
+          document.getElementById('userimg').innerHTML = cursor.value.userimg;
+        }
+
+        document.getElementById('logOut').addEventListener('click', () => {
+          document.getElementById('username').innerHTML = "Anonymous";
+          userimg.src = "img/user.png";
+          document.getElementById('logOut').style.display = "none";
+          document.getElementById('logIn').style.display = "block";
+          document.getElementById('editUser').style.display = "none";
+        })
+
+    }
+
   };
 
   req.onerror = function (e) {
@@ -102,76 +135,6 @@ function readUsers(db) {
     db.close();
     opened = false;
   };
-}
-
-function showUsers(users) {
-  var ul = document.getElementById("users-ul");
-
-  ul.innerHTML = "";
-  for (let i = 0; i < users.length; i++) {
-    ul.innerHTML +=
-      "<li><span><div>Id: " +
-      users[i].id +
-      "</span></div><span><div>Username: " +
-      users[i].username +
-      "</span></div><span><div>Useremail: " +
-      users[i].useremail +
-      "</span></div><span><div id='messageDelete_"+users[i].id+"'></div></span><button user_id=" +
-      users[i].id +
-      " id=user_" +
-      users[i].id +
-      ">Delete user</button></li>";
-  }
-
-  for (let i = 0; i < users.length; i++) {
-    document.getElementById("user_" + users[i].id).addEventListener('click', () =>{
-        document.getElementById("messageDelete_" + users[i].id).innerHTML= 
-        "<div>Are you sure you want to delete this user?</div>"+
-        "<div id='answer'><button id='delete_"+users[i].id+"'>Yes</button><button id='no'>No</button></div>";
-        
-        document.getElementById('answer').addEventListener('click', (e) =>{
-           if(e.target.id == 'delete_'+users[i].id){
-            console.log("Deleted");
-            deleteUser(users[i].id);
-           }
-        });
-
-    });
-  }
-}
-
-
-function deleteUser(user_id) {
-  
-  console.log("deleteUser");
- // var button_id = e.target.id;
-  // var user_id = document.getElementById(button_id).getAttribute("user_id");
-  
-  openCreateDb(function (db) {
-    console.log(user_id);
-    var tx = db.transaction(DB_STORE_NAME, "readwrite");
-    var store = tx.objectStore(DB_STORE_NAME);
-  
-    //Delete data in our ObjectStore
-    var req = store.delete(parseInt(user_id));
-  
-    req.onsuccess = function (e) {
-      console.log("deleteUser: Data successfully removed: " + user_id);
-  
-      //Operation to do after deleting a record
-      readData();
-    };
-  
-    req.onerror = function (e) {
-      console.error("deleteUser: error removing data:", e.target.errorCode);
-    };
-  
-    tx.oncomplete = function () {
-      console.log("deleteUser: tx completed");
-      db.close();
-      opened = false;
-    };
-  });
 }
 
 window.addEventListener("load", (e) => {

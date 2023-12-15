@@ -1,0 +1,4 @@
+Crear taula per guardar quin usuari esta logged i quin no
+Editar valors pagina administrador
+Si elimin usuari que esta logged fer log out i treure de pagina admin
+No poder accedir per ruta sense ser admin

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Edit user</h1>
+    </header>
+    <main>
+        <div class="formUser">
+            <div class="col-12 mb-2">
+                <label type="text" for="username">New username</label>
+                <input name="username" id="username" type="text">
+            </div>
+            <div class="col-12 mb-2">
+                <label type="text" for="useremail">New useremail</label>
+                <input name="useremail" id="useremail" type="email">
+            </div>
+            <div class="col-12">
+                <label type="text" for="userpwd">New password</label>
+                <input name="username" id="userpwd" type="text">
+            </div>
+            <div class="row selectAvatar">
+                <div class="col-3 mx-3">
+                  <label for="radioImage1">
+                    <input type="radio" name="radioImage" id="radioImage1" path1="img/image1.png"/>
+                    <img class="imgAvatar" src="img/image1.png" />
+                  </label>
+                </div>
+  
+                <div class="col-3 mx-1">
+                  <label for="radioImage2">
+                    <input type="radio" name="radioImage" id="radioImage2" path2="img/image2.png"  />
+                    <img class="imgAvatar" src="img/image2.png"/>
+                  </label>
+                </div>
+  
+                <div class="col-3 mx-3 mb-3">
+                  <label for="radioImage3">
+                    <input type="radio" name="radioImage" id="radioImage3" path3="img/image3.png"  />
+                    <img class="imgAvatar" src="img/image3.png"/>
+                  </label>
+                </div>
+              </div>
+            <div class="col-12">
+                <button id="confirm">Confirm</button>
+            </div>
+        </div>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+</html>

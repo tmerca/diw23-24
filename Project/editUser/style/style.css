@@ -1,0 +1,26 @@
+input[type=radio]:hover + img,
+input[type=radio]:checked + img {
+    opacity: 100%;
+    max-width: 120px;
+    max-height: 120px;
+    transition: all 1s;
+}
+
+.imgAvatar{
+    opacity: 50%;
+    max-width: 90px;
+    max-height: 90px;
+    transition: all 0.5s;
+}
+
+input[type=radio]{
+    display: none; 
+}
+
+.formUser {
+    width: 400px;
+}
+
+.selectAvatar {
+    margin-top: 30px;
+}
